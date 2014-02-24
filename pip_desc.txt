@@ -17,7 +17,7 @@ Features
 Usage
 =============
 
-** url **
+**url**
 
     > import pyimgdown
     > url = "https://localhost/test.jpeg"
@@ -28,7 +28,7 @@ Usage
 
 
 
-** file **
+**file**
 
     > import pyimgdown<br/>
     > pyimgdown.download(file="./url_list.txt")<br/>
@@ -47,7 +47,7 @@ Usage
     ]
 
 
-** url+thumbnail**
+**url+thumbnail**
 
     > pyimgdown.download(url="https://localhost/test.jpeg", thumbnail_size=(64,64))
     {
@@ -56,7 +56,7 @@ Usage
     }
 
 
-** url+thumbnail+download directory**
+**url+thumbnail+download directory**
 
     > pyimgdown.download(url="https://localhost/test.jpeg", thumbnail_size=(64,64), download_dir="./download")
     {
