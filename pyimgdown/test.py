@@ -15,7 +15,6 @@ class TestPyImgDown(unittest.TestCase):
     def setUp(self):
         self.file = "test.txt"
         self.url = "https://pbs.twimg.com/profile_images/378800000492587949/2fa83be6eff4a9b113845aed83e8cf8e.jpeg"
-        print "setup"
 
     def test_url(self):
         file_name = "2fa83be6eff4a9b113845aed83e8cf8e.jpeg"
