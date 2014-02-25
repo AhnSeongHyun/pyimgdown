@@ -1,5 +1,7 @@
 pyimgdown is a python module for downloading image using url and resizing.
 
+[![Build Status](https://travis-ci.org/AhnSeongHyun/pyimgdown.png)](https://travis-ci.org/AhnSeongHyun/pyimgdown)
+
 
 Installation
 =============
