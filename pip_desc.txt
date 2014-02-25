@@ -3,7 +3,7 @@ pyimgdown is a python module for downloading image using url and resizing.
 
 Installation
 =============
-    pip install pyimgdown
+pip install pyimgdown
 
 
 Features
@@ -17,11 +17,13 @@ Features
 Usage
 =============
 
+
+
 **url**
 
-    > import pyimgdown
-    > url = "https://localhost/test.jpeg"
-    > pyimgdown.download(url=url)
+>>> import pyimgdown
+>>> url = "https://localhost/test.jpeg"
+>>> pyimgdown.download(url=url)
     ...
     => {'image': './PyImgDown/test.jpeg'}
 
@@ -30,9 +32,9 @@ Usage
 
 **file**
 
-    > import pyimgdown<br/>
-    > pyimgdown.download(file="./url_list.txt")<br/>
-    ...
+>>> import pyimgdown
+>>> pyimgdown.download(file="./url_list.txt")
+...
     [
     {'image': u'./PyImgDown/test1.jpg'},
     {'image': u'./PyImgDown/test2.jpg'},
@@ -49,7 +51,7 @@ Usage
 
 **url+thumbnail**
 
-    > pyimgdown.download(url="https://localhost/test.jpeg", thumbnail_size=(64,64))
+>>> pyimgdown.download(url="https://localhost/test.jpeg", thumbnail_size=(64,64))
     {
     'image': './PyImgDown/test.jpeg',
     'thumbnail': './PyImgDown/test_thumbnail.jpeg'
@@ -58,7 +60,8 @@ Usage
 
 **url+thumbnail+download directory**
 
-    > pyimgdown.download(url="https://localhost/test.jpeg", thumbnail_size=(64,64), download_dir="./download")
+
+>>> pyimgdown.download(url="https://localhost/test.jpeg", thumbnail_size=(64,64), download_dir="./download")
     {
     'image': './download/test.jpeg',
     'thumbnail': './download/test_thumbnail.jpeg'

@@ -13,6 +13,9 @@ Features
 * single url mode and file (url list file) mode.
 * specify download directory.
 
+Python Version
+==============
+* support python 2.7 
 
 Usage
 =============

@@ -15,7 +15,7 @@ setup(name='pyimgdown',
       classifiers=[
       'Development Status :: 3 - Alpha',
       'Intended Audience :: Developers',
-      'Programming Language :: Python',
+      'Programming Language :: Python :: 2.7',
       'Topic :: Utilities',
       'Topic :: Software Development :: Libraries :: Python Modules',
       ],
