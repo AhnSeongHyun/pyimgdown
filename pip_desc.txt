@@ -9,7 +9,7 @@ pip install pyimgdown
 Features
 =============
 * download image from url.
-* resize and attach "_thumbnail" suffix.
+* resize and attach thumbnail file suffix.
 * single url mode and file (url list file) mode.
 * specify download directory.
 
@@ -65,4 +65,14 @@ Usage
     {
     'image': './download/test.jpeg',
     'thumbnail': './download/test_thumbnail.jpeg'
+    }
+
+
+**url+thumbnail+download directory+thumbnail_file_suffix**
+
+
+>>> pyimgdown.download(url="https://localhost/test.jpeg", thumbnail_size=(64,64), download_dir="./download", thumbnail_file_suffix="_thumb")
+    {
+    'image': './download/test.jpeg',
+    'thumbnail': './download/test_thumb.jpeg'
     }
