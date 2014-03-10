@@ -51,7 +51,7 @@ def get_download_dir(download_dir=None):
 
 
 
-def download(file=None, url=None, thumbnail_size=None, download_dir=None):
+def download(file=None, url=None, thumbnail_size=None, download_dir=None, thumbnail_file_suffix=None):
 
     download_dir = get_download_dir(download_dir)
 
@@ -62,7 +62,7 @@ def download(file=None, url=None, thumbnail_size=None, download_dir=None):
     if thumbnail_size:
         width = int(thumbnail_size[0])
         height = int(thumbnail_size[1])
-        thumbnailer = Thumbnailer(width, height)
+        thumbnailer = Thumbnailer(width=width, height=height, thumbnail_file_suffix=thumbnail_file_suffix)
 
 
     if file:

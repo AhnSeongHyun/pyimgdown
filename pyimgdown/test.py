@@ -177,6 +177,62 @@ class TestPyImgDown(unittest.TestCase):
             else:
                 self.assertNotEquals
 
+    def test_file_thumbnail_suffix_none(self):
+
+        thumbnail_size = (64, 64)
+        download_dir = "./dump"
+
+        #crete test list
+        test_file_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), self.file)
+        f = codecs.open(test_file_path, 'r', 'utf-8')
+        url_list = f.readlines()
+
+        file_path_list = list()
+        thumbnail_file_path_list = list()
+
+        result_list = pyimgdown.download(file=test_file_path, \
+                                        thumbnail_size=thumbnail_size,\
+                                        download_dir=download_dir, \
+                                        thumbnail_file_suffix=None)
+
+        for result in result_list:
+            download_file_path = result['image']
+            thumbnail_file_path = result['thumbnail']
+
+
+            if "_thumbnail" in thumbnail_file_path:
+                self.assertEquals
+            else:
+                self.assertNotEquals
+
+    def test_file_thumbnail_suffix(self):
+
+        thumbnail_size = (64, 64)
+        download_dir = "./dump"
+
+        #crete test list
+        test_file_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), self.file)
+        f = codecs.open(test_file_path, 'r', 'utf-8')
+        url_list = f.readlines()
+
+        file_path_list = list()
+        thumbnail_file_path_list = list()
+  
+
+        result_list = pyimgdown.download(file=test_file_path, \
+                                        thumbnail_size=thumbnail_size,\
+                                        download_dir=download_dir, \
+                                        thumbnail_file_suffix="_thumb")
+
+        for result in result_list:
+            download_file_path = result['image']
+            thumbnail_file_path = result['thumbnail']
+
+
+            if "_thumb" in thumbnail_file_path:
+                self.assertEquals
+            else:
+                self.assertNotEquals
 
 if __name__ == '__main__':
     suite = unittest.TestLoader().loadTestsFromTestCase(TestPyImgDown)
