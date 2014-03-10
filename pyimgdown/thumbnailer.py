@@ -16,10 +16,13 @@ class Thumbnailer(object):
     def __init__(self):
         pass
 
-    def __init__(self, width=64, height=64, thumbnail_file_suffix="_thumbnail"):
+    def __init__(self, width=64, height=64, thumbnail_file_suffix=None):
         self.width = width
         self.height = height
-        self.thumbnail_file_suffix = thumbnail_file_suffix
+
+        if thumbnail_file_suffix:
+            self.thumbnail_file_suffix = thumbnail_file_suffix
+
 
     def thumbnail(self, image_file_path=None, thumbnail_file_path=None):
 

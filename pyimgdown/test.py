@@ -237,3 +237,4 @@ class TestPyImgDown(unittest.TestCase):
 if __name__ == '__main__':
     suite = unittest.TestLoader().loadTestsFromTestCase(TestPyImgDown)
     unittest.TextTestRunner(verbosity=2).run(suite)
+ 
