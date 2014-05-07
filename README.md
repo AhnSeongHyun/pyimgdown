@@ -63,7 +63,9 @@ Usage
 
 **url+thumbnail+download directory**
 
-    > pyimgdown.download(url="https://localhost/test.jpeg", thumbnail_size=(64,64), download_dir="./download")
+    > pyimgdown.download(url="https://localhost/test.jpeg", 
+                        thumbnail_size=(64,64), 
+                        download_dir="./download")
     {
     'image': './download/test.jpeg',
     'thumbnail': './download/test_thumbnail.jpeg'
@@ -73,7 +75,10 @@ Usage
 **url+thumbnail+download directory+thumbnail_file_suffix**
 
 
-    > pyimgdown.download(url="https://localhost/test.jpeg", thumbnail_size=(64,64), download_dir="./download", thumbnail_file_suffix="_thumb")
+    > pyimgdown.download(url="https://localhost/test.jpeg", 
+                        thumbnail_size=(64,64), 
+                        download_dir="./download", 
+                        thumbnail_file_suffix="_thumb")
     {
     'image': './download/test.jpeg',
     'thumbnail': './download/test_thumb.jpeg'
