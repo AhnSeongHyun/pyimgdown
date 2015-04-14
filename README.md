@@ -17,7 +17,8 @@ Features
 
 Python Version
 ==============
-* support python 2.7 
+* support python 2.7
+* support python 3.4
 
 Usage
 =============
