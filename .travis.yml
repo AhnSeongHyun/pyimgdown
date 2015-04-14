@@ -8,4 +8,4 @@ install:
   - python setup.py install
 
 script:
-  - python pyimgdown.test
+  - python ./pyimgdown/test.py
