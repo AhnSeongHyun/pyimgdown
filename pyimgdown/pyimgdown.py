@@ -78,4 +78,4 @@ def download(file=None, url=None, thumbnail_size=None, download_dir=None, thumbn
     elif url:
         return do_work(url=url, download_dir=download_dir)
     else:
-        print "no arguments"
+        print ("no arguments")

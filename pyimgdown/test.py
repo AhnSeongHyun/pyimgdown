@@ -12,67 +12,13 @@ import urlparse
 class TestPyImgDown(unittest.TestCase):
 
     img_url = None
-    def setUp(self):
-        self.file = "test.txt"
-        self.url = "https://pbs.twimg.com/profile_images/378800000492587949/2fa83be6eff4a9b113845aed83e8cf8e.jpeg"
 
-    def test_url(self):
-        file_name = "2fa83be6eff4a9b113845aed83e8cf8e.jpeg"
-        if os.path.isfile(file_name):
-            os.remove(file_name)
-
-        file_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), file_name)
-
-        result = pyimgdown.download(url=self.url)
-        self.assertEqual(result['image'], file_path)
-
-
-    def test_url_thumbnail(self):
-        file_name = "2fa83be6eff4a9b113845aed83e8cf8e.jpeg"
-        thumbnail_file_name = "2fa83be6eff4a9b113845aed83e8cf8e_thumbnail.jpeg"
-
-        if os.path.isfile(file_name):
-            os.remove(file_name)
-
-        if os.path.isfile(thumbnail_file_name):
-            os.remove(thumbnail_file_name)
-
-        file_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), file_name)
-        thumbnail_file_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), thumbnail_file_name)
-
-        thumbnail_size = (64, 64)
-        result = pyimgdown.download(url=self.url, thumbnail_size=thumbnail_size)
-
-        self.assertEqual(result['image'], file_path)
-        self.assertEqual(result['thumbnail'], thumbnail_file_path)
-
-
-    def test_url_thumbnail_dir(self):
-        thumbnail_size = (64, 64)
-        download_dir = "./dump"
-
-        file_name = "2fa83be6eff4a9b113845aed83e8cf8e.jpeg"
-        thumbnail_file_name = "2fa83be6eff4a9b113845aed83e8cf8e_thumbnail.jpeg"
-
-        file_path = os.path.join(download_dir, file_name)
-        thumbnail_file_path = os.path.join(download_dir, thumbnail_file_name)
-
-        if os.path.isfile(file_path):
-            os.remove(file_path)
-
-        if os.path.isfile(thumbnail_file_path):
-            os.remove(thumbnail_file_path)
-
-        result = pyimgdown.download(url=self.url, thumbnail_size=thumbnail_size, download_dir=download_dir)
-
-        self.assertEqual(result['image'], file_path)
-        self.assertEqual(result['thumbnail'], thumbnail_file_path)
 
 
     def test_file(self):
 
         #crete test list
-        test_file_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), self.file)
+        test_file_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'test1.txt')
         f = codecs.open(test_file_path, 'r', 'utf-8')
         url_list = f.readlines()
         file_path_list = list()
@@ -92,13 +38,13 @@ class TestPyImgDown(unittest.TestCase):
                 self.assertEquals
             else:
                 self.assertNotEquals
-
+    #
     def test_file_thumbnail(self):
 
         thumbnail_size = (64, 64)
 
         #crete test list
-        test_file_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), self.file)
+        test_file_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'test2.txt')
         f = codecs.open(test_file_path, 'r', 'utf-8')
         url_list = f.readlines()
 
@@ -141,7 +87,7 @@ class TestPyImgDown(unittest.TestCase):
         download_dir = "./dump"
 
         #crete test list
-        test_file_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), self.file)
+        test_file_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'test3.txt')
         f = codecs.open(test_file_path, 'r', 'utf-8')
         url_list = f.readlines()
 
@@ -183,7 +129,7 @@ class TestPyImgDown(unittest.TestCase):
         download_dir = "./dump"
 
         #crete test list
-        test_file_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), self.file)
+        test_file_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'test4.txt')
         f = codecs.open(test_file_path, 'r', 'utf-8')
         url_list = f.readlines()
 
@@ -211,13 +157,13 @@ class TestPyImgDown(unittest.TestCase):
         download_dir = "./dump"
 
         #crete test list
-        test_file_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), self.file)
+        test_file_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'test5.txt')
         f = codecs.open(test_file_path, 'r', 'utf-8')
         url_list = f.readlines()
 
         file_path_list = list()
         thumbnail_file_path_list = list()
-  
+
 
         result_list = pyimgdown.download(file=test_file_path, \
                                         thumbnail_size=thumbnail_size,\

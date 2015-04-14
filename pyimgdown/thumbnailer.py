@@ -37,7 +37,7 @@ class Thumbnailer(object):
             return thumbnail_file_path
 
         except Exception as e:
-            print "Unable to load image"
+            print ("Unable to load image")
             return None
 
 
