@@ -10,11 +10,8 @@ import codecs
 from imgdownloader import ImageDownloader
 from thumbnailer import Thumbnailer
 
-
-
 global downloader
 global thumbnailer
-
 
 def do_work(url=None, download_dir=None):
     result_dict = dict()
