@@ -5,7 +5,7 @@ __author__ = 'ahnseonghyun'
 
 from setuptools import setup, find_packages
 
-version = '0.2'
+version = '0.5'
 
 setup(name='pyimgdown',
 
@@ -16,6 +16,7 @@ setup(name='pyimgdown',
       'Development Status :: 3 - Alpha',
       'Intended Audience :: Developers',
       'Programming Language :: Python :: 2.7',
+      'Programming Language :: Python :: 3.4',
       'Topic :: Utilities',
       'Topic :: Software Development :: Libraries :: Python Modules',
       ],
