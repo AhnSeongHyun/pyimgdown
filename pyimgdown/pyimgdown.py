@@ -10,8 +10,7 @@ import codecs
 from imgdownloader import ImageDownloader
 from thumbnailer import Thumbnailer
 
-reload(sys)
-sys.setdefaultencoding("UTF-8")
+
 
 global downloader
 global thumbnailer

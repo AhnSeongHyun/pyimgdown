@@ -7,7 +7,12 @@ import os
 import sys
 import pyimgdown
 import codecs
-import urlparse
+try:
+    import urlparse
+except Exception as e:
+    from urllib import parse as urlparse
+
+
 
 class TestPyImgDown(unittest.TestCase):
 
