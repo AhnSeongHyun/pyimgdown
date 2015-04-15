@@ -8,6 +8,11 @@ Installation
     pip install pyimgdown
 
 
+Version
+=============
+latest : V0.5.4
+
+
 Features
 =============
 * download image from url.
