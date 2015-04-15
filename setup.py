@@ -5,15 +5,15 @@ __author__ = 'ahnseonghyun'
 
 from setuptools import setup, find_packages
 
-version = '0.5'
+version = '0.5.4'
 
 setup(name='pyimgdown',
-
       version=version,
       description="A module of downloading image from URL and resizing.",
       long_description=open("pip_desc.txt").read() + "\n",
       classifiers=[
-      'Development Status :: 3 - Alpha',
+      'License :: OSI Approved :: MIT License',
+      'Development Status :: 4 - Beta',
       'Intended Audience :: Developers',
       'Programming Language :: Python :: 2.7',
       'Programming Language :: Python :: 3.4',
